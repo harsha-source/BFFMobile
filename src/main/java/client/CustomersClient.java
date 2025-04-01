@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 // Feign client for Customers Service (via ALB)
 @FeignClient(name = "customers-service", url = "http://internal-bookstore-dev-InternalALB-178925506.us-east-1.elb.amazonaws.com:3000/customers", configuration = FeignConfig.class)
-@RequestMapping("/customers")
 public interface CustomersClient {
 
     @PostMapping

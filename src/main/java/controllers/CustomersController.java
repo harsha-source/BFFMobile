@@ -26,7 +26,7 @@ public class CustomersController {
     public ResponseEntity<Object> addCustomer(@RequestBody Customer customer) {
         try {
             Object result = customersClient.addCustomer(customer);
-            return ResponseEntity.ok(result);
+            return ResponseEntity.status(201).body(result);
         } catch (CustomFeignException e) {
             try {
                 // Convert the response body to the appropriate format

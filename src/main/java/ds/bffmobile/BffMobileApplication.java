@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableFeignClients(basePackages = {"ds.bffmobile", "client", "controllers"})
-@ComponentScan(basePackages = {"ds.bffmobile", "controllers", "client"})
+@EnableFeignClients(basePackages = {"ds.bffmobile", "client", "controllers", "filters"})
+@ComponentScan(basePackages = {"ds.bffmobile", "controllers", "client", "filters"})
 public class BffMobileApplication {
 
     public static void main(String[] args) {

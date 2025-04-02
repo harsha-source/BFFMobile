@@ -51,7 +51,7 @@ public class JwtValidationFilter extends OncePerRequestFilter {
 
         // Check Authorization header
         String authHeader = request.getHeader("Authorization");
-        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+        if (authHeader == null || !authHeader.startsWith("Bearer ") || authHeader.isEmpty()) {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setContentType("application/json");
             response.getWriter().write("{\"error\":\"Missing or invalid Authorization header\"}");

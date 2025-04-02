@@ -87,7 +87,7 @@ public class BooksController {
             String genre = (String) result.get("genre");
 
             if(genre.equals("non-fiction")){
-                result.put("genre", "3");
+                result.put("genre", Integer.valueOf(3));
             }
 
             return ResponseEntity.ok(result);
@@ -109,7 +109,7 @@ public class BooksController {
             String genre = (String) result.get("genre");
 
             if(genre.equals("non-fiction")){
-                result.put("genre", "3");
+                result.put("genre", Integer.valueOf(3));
             }
 
             return ResponseEntity.ok(result);
